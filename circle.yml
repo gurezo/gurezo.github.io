@@ -1,7 +1,11 @@
+dependencies:
+  override:
+    npm install --production
+  pre:
+    npm install coffeescript
 deployment:
   deploy:
     branch: master
     commands:
       - make build
       - make deploy
-      
