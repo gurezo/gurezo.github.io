@@ -11,6 +11,17 @@
   
 
 
+  <!-- Force HTTPS Start -->
+  <script>
+  // Don't force http when serving the website locally
+  if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+  </script>
+
+  <!-- Force HTTPS End -->
+
+
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,6 +237,8 @@ Octocat is Github’s logo and trademark and here is used to illustrate a fictio
       
         
       
+        
+      
     
       
         
@@ -280,6 +293,8 @@ to cancel the serving (Ctr + C) and serve the website again.</p>
 
 <!-- Latest Post Preview End -->
 
+        
+      
         
       
         
@@ -397,6 +412,8 @@ to cancel the serving (Ctr + C) and serve the website again.</p>
       
         
       
+        
+      
     
       
         
@@ -441,6 +458,8 @@ to cancel the serving (Ctr + C) and serve the website again.</p>
 
 <!-- Contact End -->
 
+        
+      
         
       
         
@@ -546,6 +565,50 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 
 
 
+  
+
+  <!-- Google Tracking Id Start -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Google Tracking Id End -->
+
+  
+
+
+
+
+  <!-- Disqus -->
+
+  
+
+  
+
+    <!-- Comments Counter Start -->
+
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'panossakkos'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+    <!-- Comments Counter End -->
+
+  
 
 
 
@@ -606,7 +669,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, '', 'http://localhost:4000/');
+    history.pushState({}, '', 'https://panossakkos.github.io/');
   }
 }
 </script>
