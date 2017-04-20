@@ -197,5 +197,3 @@ sass:
 gems:
   - jekyll-paginate
   - jemoji
-
-theme: jekyll-paginate

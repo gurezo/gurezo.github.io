@@ -1,3 +1,6 @@
+install: gem install jekyll jekyll-paginate jemoji html-proofer
+script: jekyll serve --baseurl "" --detach && htmlproofer ./_site --disable-external --empty-alt-ignore
+
 dependencies:
   override:
     npm install --production
