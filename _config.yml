@@ -55,7 +55,7 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "i love web browser technokogy's"
+  - text: "i love web browser technology's"
   - text: "when web and real a crossing, What kind of world is seen?"
 
 me-img: "/img/jetpacktocat.png"
