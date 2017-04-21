@@ -29,10 +29,10 @@ force-https: True
 #############
 
 lang: "en"
-author: "John Smith"
-title: "{ John Smith }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+author: "lifewood"
+title: "lifewood's Idle talk interruption"
+description: "Blog and website of lifewood,Something in which I take an interest loosely is being written.."
+keywords: "chirimen, B2G, Firefox, Angular"
 favicon: "/img/favicon.ico"
 
 ################
@@ -145,13 +145,11 @@ author_blurb_image: "/img/author.png"
 
 social:
   - title: "facebook"
-    url: "https://facebook.com/"
+    url: "https://www.facebook.com/akihiko.kigure"
   - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://twitter.com/ic_lifewood"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+    url: "https://github.com/gurezo"
   - title: "rss"
     url: "/feed.xml"
 
