@@ -1,85 +1,81 @@
-# { Personal } Jekyll Theme
-![Build Status](https://travis-ci.org/PanosSakkos/personal-jekyll-theme.svg?branch=master)
-![license](https://img.shields.io/badge/license-MIT-blue.svg?link=https://github.com/dono-app/ios/blob/master/LICENSE)
-[![Join the chat at https://gitter.im/PanosSakkos/personal-jekyll-theme](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PanosSakkos/personal-jekyll-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Millidocs Theme
 
-{ Personal } is a free responsive Jekyll theme, about you :wink:
+Simple documentation theme for Jekyll featuring [Milligram CSS framework](http://milligram.io/), [PrismJS syntax highlighter](http://prismjs.com/) and [LunrJS search](https://lunrjs.com/).
 
-You can watch it in action [here](https://panossakkos.github.io/personal-jekyll-theme/)!
+One of the core features is a full text client side search and full responsiveness. It has zero dependencies with other gems and should be easily build with Github.
 
-<img src="https://github.com/panossakkos/personal-jekyll-theme/raw/master/.github/personal-mobile.mov.gif" height="480">
+## Installation
 
-<img src="https://github.com/panossakkos/personal-jekyll-theme/raw/master/.github/personal-desktop.mov.gif" height="600" width="960">
+Add this line to your Jekyll site's `Gemfile`:
 
-## What value does { Personal } add
-
-* Fork of [Timeline](https://github.com/kirbyt/timeline-jekyll-theme) (mashup of [Grayscale by Start Bootstrap](https://github.com/IronSummitMedia/startbootstrap-grayscale) and [Agency Jekyll Theme](https://github.com/y7kim/agency-jekyll-theme))
-  * Modern and minimal design
-    * Responsive templates for home page, blog archive and posts. Looks great on mobile, tablet, and desktop devices
-    * Sweet animations
-    * Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers
-  * Timeline
-    * Tell your story so far with a sleek timeline of dates, pictures and descriptions
-  * White on black text, making the reading experience tireless
-  * Google analytics  
-* Customization and full control of your website and blog through the site config
-* Customization of the website's coloring
-* Blogging functionality
-  * Preview of the latest post in the home page
-  * Archive page
-  * Syntax highlighting
-  * Emojis
-  * Gesture navigation in archive and post pages by swiping
-  * Hashtags
-  * Categories
-  * Disqus comments
-  * Bootstrap share buttons
-  * RSS feed
-* Author blurb under the posts
-* 404 page
-* iOS and Android Web App mode
-* Enforcing of https protocol
-* Protection from email harvesting
-* Sitemap
-* Travis CI integration with [html-proofer](https://github.com/gjtorikian/html-proofer)
-
-## Documentation
-
-The theme contains documentation in the form of [blog posts](https://panossakkos.github.io/personal-jekyll-theme/blog/index.html).
-
-## How to run locally
-
-First, you need to install jekyll and the dependencies of { Personal } by running:
-
-```shell
-./scripts/install
+```ruby
+gem "millidocs"
 ```
 
-Then, you can build and serve your website by simply running:
+Adapt your Jekyll site config `_config.yml`:
 
-```shell
-./scripts/serve-production
+```yaml
+  title: My Docs Page Title
+  description: MY description
+  url: "https://base/url/site"
+  theme: millidocs
+
+  markdown: kramdown
+  kramdown:
+    syntax_highlighter_opts:
+      disable : true
+
+  exclude:
+    - Gemfile
+    - Gemfile.lock
+    - README.md
 ```
 
-To serve across lan (requires su to forward the port 4000 over lan):
+And then execute:
 
-```shell
-./scripts/serve-lan-production
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install millidocs
+
+
+## Usage
+
+### Github Pages
+
+You can use this theme by simply adding `remote_theme: alexander-heimbuch/millidocs` to your `_config.yml` (Thanks to @kogli for the hint).
+
+### Available Themes
+
+This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
+
+### Navigation
+
+The navigation supports especially only one level. If you need deep nested structures you propably should use a larger documentation system like [GitBook](https://www.gitbook.com/).
+
+Not every page by default is part of the navigation. If you want to add a page to the navigation you have to add the `navigation` attribute with a desired `index`:
+
+```
+---
+layout: page
+title: Navigation
+navigation: 2
+---
 ```
 
-## OSS used in { Personal }
+The navigation `index` is starting with 1 representing the first item. 
 
-One of the reasons { Personal } is real is the following OSS projects:
 
-  1. [Grayscale](http://startbootstrap.com/template-overviews/grayscale/)
-  2. [hammer.js](https://hammerjs.github.io/)
-  3. [highlightjs](https://highlightjs.org/)
-  4. [RRSSB](https://github.com/kni-labs/rrssb)
-  5. [Timeline](https://github.com/kirbyt/timeline-jekyll-theme)
-  6. [typed.js](https://github.com/mattboldt/typed.js/)
+## Development
 
-<div style="font-size:16px;margin:0 auto;width:300px">
-    <a href="https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi">
-        <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
-    </a>
-</div>
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
