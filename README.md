@@ -1,81 +1,31 @@
-# Millidocs Theme
+# ng-pwa-sample
+this is angular sample with pwa
 
-Simple documentation theme for Jekyll featuring [Milligram CSS framework](http://milligram.io/), [PrismJS syntax highlighter](http://prismjs.com/) and [LunrJS search](https://lunrjs.com/).
+## for reference
+- [Angular CLI v7でPWAを作ってみよう！](https://qiita.com/puku0x/items/a6db78cc67d1eb960384)
 
-One of the core features is a full text client side search and full responsiveness. It has zero dependencies with other gems and should be easily build with Github.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Installation
+## Development server
 
-Add this line to your Jekyll site's `Gemfile`:
+Run `npx node-static ./docs --spa --port=9000` for a dev server. Navigate to `http://127.0.0.1:9000`. The app will automatically reload if you change any of the source files.
 
-```ruby
-gem "millidocs"
-```
+## Code scaffolding
 
-Adapt your Jekyll site config `_config.yml`:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-```yaml
-  title: My Docs Page Title
-  description: MY description
-  url: "https://base/url/site"
-  theme: millidocs
+## Build
 
-  markdown: kramdown
-  kramdown:
-    syntax_highlighter_opts:
-      disable : true
+Run `ng run ng-pwa-sample:app-shell:production --route=/` to build the project. The build artifacts will be stored in the `docs/` directory. Use the `--prod` flag for a production build.
 
-  exclude:
-    - Gemfile
-    - Gemfile.lock
-    - README.md
-```
+## Running unit tests
 
-And then execute:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-    $ bundle
+## Running end-to-end tests
 
-Or install it yourself as:
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-    $ gem install millidocs
+## Further help
 
-
-## Usage
-
-### Github Pages
-
-You can use this theme by simply adding `remote_theme: alexander-heimbuch/millidocs` to your `_config.yml` (Thanks to @kogli for the hint).
-
-### Available Themes
-
-This theme is made for _pages_ only and doesn't support _posts_ by default. So the only available layouts are `default` and `page`.
-
-### Navigation
-
-The navigation supports especially only one level. If you need deep nested structures you propably should use a larger documentation system like [GitBook](https://www.gitbook.com/).
-
-Not every page by default is part of the navigation. If you want to add a page to the navigation you have to add the `navigation` attribute with a desired `index`:
-
-```
----
-layout: page
-title: Navigation
-navigation: 2
----
-```
-
-The navigation `index` is starting with 1 representing the first item. 
-
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
